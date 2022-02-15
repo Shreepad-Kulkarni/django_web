@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get posts</title>
+</head>
+<body>
+    {% csrf_token  %}
+    {% for task in tasks %}
+    <tr>
+        <th scope="row">{{forLoop.counter}}</th>
+        <td>{{task.name}}</td>
+        <td>{{task.desc}}</td>
+    </tr>
+    {% endfor %}
+     
+    
+</body>
+</html>
